@@ -1,0 +1,147 @@
+/* ============================================================
+   Atlas SEO Theme
+   Bootstrap 5.3
+   ============================================================ */
+
+:root,
+[data-bs-theme="dark"]{
+
+    /*======================================================
+        BRAND
+    ======================================================*/
+
+    --bs-blue:#132C4C;
+    --bs-indigo:#1B3F6B;
+    --bs-purple:#5D4AA3;
+    --bs-pink:#D63384;
+    --bs-red:#C64545;
+    --bs-orange:#E38B2C;
+    --bs-yellow:#D4A017;
+    --bs-green:#1E9E63;
+    --bs-teal:#138A84;
+    --bs-cyan:#2980B9;
+
+    /*======================================================
+        COLORS
+    ======================================================*/
+
+    --bs-primary:#D4A017;
+    --bs-secondary:#132C4C;
+    --bs-success:#1E9E63;
+    --bs-info:#2980B9;
+    --bs-warning:#E3B239;
+    --bs-danger:#C64545;
+    --bs-light:#E7E7E7;
+    --bs-dark:#071528;
+
+    /*======================================================
+        RGB
+    ======================================================*/
+
+    --bs-primary-rgb:212,160,23;
+    --bs-secondary-rgb:19,44,76;
+    --bs-success-rgb:30,158,99;
+    --bs-info-rgb:41,128,185;
+    --bs-warning-rgb:227,178,57;
+    --bs-danger-rgb:198,69,69;
+    --bs-light-rgb:231,231,231;
+    --bs-dark-rgb:7,21,40;
+
+    /*======================================================
+        BODY
+    ======================================================*/
+
+    --bs-body-bg:#071528;
+    --bs-body-bg-rgb:7,21,40;
+
+    --bs-body-color:#E7E7E7;
+    --bs-body-color-rgb:231,231,231;
+
+    --bs-emphasis-color:#FFFFFF;
+
+    --bs-secondary-color:#B5C0CC;
+    --bs-secondary-color-rgb:181,192,204;
+
+    --bs-tertiary-color:#8A99AA;
+
+    /*======================================================
+        BACKGROUND
+    ======================================================*/
+
+    --bs-primary-bg-subtle:#2E2410;
+    --bs-secondary-bg:#0B1D33;
+    --bs-secondary-bg-rgb:11,29,51;
+
+    --bs-tertiary-bg:#132C4C;
+
+    /*======================================================
+        BORDER
+    ======================================================*/
+
+    --bs-border-color:rgba(255,255,255,.08);
+    --bs-border-color-translucent:rgba(255,255,255,.05);
+
+    /*======================================================
+        LINKS
+    ======================================================*/
+
+    --bs-link-color:#D4A017;
+    --bs-link-hover-color:#E3B239;
+
+    /*======================================================
+        COMPONENTS
+    ======================================================*/
+
+    --bs-card-bg:#0B1D33;
+    --bs-card-cap-bg:#132C4C;
+    --bs-card-border-color:rgba(255,255,255,.06);
+
+    --bs-dropdown-bg:#0B1D33;
+    --bs-dropdown-link-color:#E7E7E7;
+    --bs-dropdown-link-hover-bg:#132C4C;
+    --bs-dropdown-link-hover-color:#D4A017;
+    --bs-dropdown-border-color:rgba(255,255,255,.08);
+
+    --bs-modal-bg:#0B1D33;
+    --bs-modal-border-color:rgba(255,255,255,.08);
+
+    --bs-popover-bg:#0B1D33;
+    --bs-popover-border-color:rgba(255,255,255,.08);
+
+    --bs-list-group-bg:#0B1D33;
+    --bs-list-group-border-color:rgba(255,255,255,.08);
+
+    --bs-accordion-bg:#0B1D33;
+    --bs-accordion-border-color:rgba(255,255,255,.08);
+
+    /*======================================================
+        FORMS
+    ======================================================*/
+
+    --bs-form-control-bg:#071528;
+    --bs-form-control-color:#FFFFFF;
+    --bs-form-control-border-color:#24476C;
+
+    --bs-focus-ring-color:rgba(212,160,23,.25);
+
+    /*======================================================
+        NAVBAR
+    ======================================================*/
+
+    --bs-navbar-bg:#071528;
+
+    --bs-navbar-color:#D2D8DF;
+    --bs-navbar-hover-color:#FFFFFF;
+    --bs-navbar-active-color:#D4A017;
+
+    --bs-navbar-brand-color:#FFFFFF;
+    --bs-navbar-brand-hover-color:#D4A017;
+
+    /*======================================================
+        TABLE
+    ======================================================*/
+
+    --bs-table-bg:#0B1D33;
+    --bs-table-striped-bg:#132C4C;
+    --bs-table-hover-bg:#183A63;
+}

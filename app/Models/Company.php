@@ -15,6 +15,7 @@ class Company extends Model
         'address',
         'primary_phone',
         'primary_email',
+        'logo',
     ];
 
     public function users()
@@ -25,5 +26,15 @@ class Company extends Model
     public function socials()
     {
         return $this->hasMany(Social::class)->orderBy('name');
+    }
+
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
+    public function products()
+    {
+        return $this->hasMany(Product::class);
     }
 }

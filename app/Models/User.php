@@ -17,6 +17,7 @@ class User extends Authenticatable
 
     const RULES = [
         'admin' => 'Administrador',
+        'company' => 'Empresa',
         'manager' => 'Gerente',
         'public' => 'Publico',
     ];
