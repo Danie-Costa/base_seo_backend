@@ -13,6 +13,7 @@ return [
         'admin.products.index' => ['title'=>'Produtos','icon'=>'fa fa-tag','mobile'=>true],
         'admin.plans.index' => ['title'=>'Planos','icon'=>'fa fa-credit-card','mobile'=>true],
         'admin.categories.index' => ['title'=>'Categorias','icon'=>'fa fa-folder','mobile'=>true],
+        'admin.leads.index' => ['title'=>'Leads','icon'=>'fa fa-envelope','mobile'=>true],
     ],
     'company' => [
         'company.dashboard' => ['title'=>'Dashboard','icon'=>'fa fa-dashboard','mobile'=>true],

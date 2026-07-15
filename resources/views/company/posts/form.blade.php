@@ -4,7 +4,6 @@
 
 
 @section('content')
-@include('layouts.partials.navbar')
 
 <div class="mt-3 pt-3 container">
     <h3>{{ $isEdit ? 'Editar Post' : 'Novo Post' }}</h3>

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.partials.navbar')
 <div  class="mt-3 pt-3 container">
     <h3 class="py-2">{{$company->name}}</h3>
     {{ Form::open(['route' => ['company.mycompany.update',$company->id],'class' => '','method' => 'put', 'files' => true]) }}

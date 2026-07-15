@@ -14,10 +14,13 @@ use App\Http\Controllers\{
     ProductController,
     PlanController,
     CategoryController,
+    LeadController,
 };
 use App\Http\Controllers\Company as CompanyModule;
 
 Auth::routes();
+
+Route::post('/lead', [LeadController::class, 'store'])->name('lead.store');
 
 Route::middleware(['permission'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -32,6 +35,7 @@ Route::middleware(['permission','auth'])->name('admin.')->prefix('admin')->group
     Route::resource('plans', PlanController::class);
     Route::resource('categories', CategoryController::class);
     Route::post('upload-image', [ApiImageController::class, 'upload'])->name('upload-image');
+    Route::resource('leads', LeadController::class)->only(['index', 'destroy']);
 });
 
 Route::middleware(['permission','auth'])->name('company.')->prefix('company')->group(function () {

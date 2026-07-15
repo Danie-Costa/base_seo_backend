@@ -3,7 +3,6 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.partials.navbar')
 
 <div class="mt-3 pt-3 container">
     <h3>{{ $readonly ? 'Ver Categoria' : ($isEdit ? 'Editar Categoria' : 'Nova Categoria') }}</h3>

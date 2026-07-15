@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.partials.navbar')
 
 <div class="mt-3 pt-3 container">
     @include('admin.partials.searchbar', ['title' => 'Meus Posts', 'route' => 'company.posts', 'model' => 'posts'])

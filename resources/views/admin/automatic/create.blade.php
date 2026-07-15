@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-@include('layouts.partials.navbar')
 <div  class="mt-3 pt-3 container vh-100">
     <h3 class="py-2">{{$title}}</h3>
     {{ Form::open(['route' => 'admin.'.$route.'.store','class' => '', 'files' => true]) }}

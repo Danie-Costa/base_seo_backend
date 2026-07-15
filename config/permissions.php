@@ -17,6 +17,7 @@ return [
             'admin.plans.edit','admin.plans.update','admin.plans.destroy',
             'admin.categories.index','admin.categories.show','admin.categories.create','admin.categories.store',
             'admin.categories.edit','admin.categories.update','admin.categories.destroy',
+            'admin.leads.index','admin.leads.destroy',
             'admin.upload-image',
         ],
         'company' => [
