@@ -39,6 +39,9 @@ return [
             'company.files.index','company.files.create','company.files.store',
             'company.files.show','company.files.edit','company.files.update','company.files.destroy',
 
+            'company.plans.index','company.plans.checkout','company.plans.success','company.plans.failure','company.plans.cancel',
+            'company.orders.index',
+
             'company.categories.index','company.categories.create','company.categories.store',
             'company.categories.show','company.categories.edit','company.categories.update','company.categories.destroy',
 

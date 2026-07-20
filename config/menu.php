@@ -23,6 +23,8 @@ return [
         'company.clients.index' => ['title'=>'Clientes','icon'=>'fa fa-users','mobile'=>true],
         'company.galleries.index' => ['title'=>'Galeria','icon'=>'fa fa-picture-o','mobile'=>true],
         'company.files.index' => ['title'=>'Arquivos','icon'=>'fa fa-file','mobile'=>true],
+        'company.plans.index' => ['title'=>'Planos','icon'=>'fa fa-credit-card','mobile'=>true],
+        'company.orders.index' => ['title'=>'Ordens','icon'=>'fa fa-list','mobile'=>true],
         'company.categories.index' => ['title'=>'Categorias','icon'=>'fa fa-folder','mobile'=>true],
     ],
 ];

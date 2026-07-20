@@ -12,6 +12,7 @@
         "laravel/tinker": "^2.8",
         "laravel/ui": "^4.6",
         "laravelcollective/html": "^6.4",
+        "mercadopago/dx-php": "^3.10",
         "pusher/pusher-php-server": "^7.2",
         "sendinblue/api-v3-sdk": "^8.4"
     },
