@@ -26,6 +26,31 @@ Route::post('/lead', [LeadController::class, 'store'])->name('lead.store');
 
 Route::post('/webhook/mercadopago', [WebhookController::class, 'mercadopago'])->name('webhook.mercadopago');
 
+// Client auth (compradores)
+Route::prefix('cliente')->name('client.')->group(function () {
+    Route::get('/login', [App\Http\Controllers\Auth\ClientAuthController::class, 'showLoginForm'])->name('login');
+    Route::post('/login', [App\Http\Controllers\Auth\ClientAuthController::class, 'login']);
+    Route::get('/register', [App\Http\Controllers\Auth\ClientAuthController::class, 'showRegisterForm'])->name('register');
+    Route::post('/register', [App\Http\Controllers\Auth\ClientAuthController::class, 'register']);
+    Route::post('/logout', [App\Http\Controllers\Auth\ClientAuthController::class, 'logout'])->name('logout');
+});
+
+// Shop público
+Route::get('/produtos', [App\Http\Controllers\ShopController::class, 'products'])->name('shop.products');
+Route::get('/produtos/{slug}', [App\Http\Controllers\ShopController::class, 'detail'])->name('shop.product-detail');
+
+// Carrinho + checkout (cliente logado)
+Route::middleware('auth:client')->group(function () {
+    Route::get('/carrinho', [App\Http\Controllers\CartController::class, 'index'])->name('shop.cart');
+    Route::post('/carrinho/adicionar/{product}', [App\Http\Controllers\CartController::class, 'add'])->name('shop.cart.add');
+    Route::delete('/carrinho/remover/{item}', [App\Http\Controllers\CartController::class, 'remove'])->name('shop.cart.remove');
+
+    Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('shop.checkout');
+    Route::post('/checkout/pagar', [App\Http\Controllers\CheckoutController::class, 'pay'])->name('shop.payment.pay');
+    Route::get('/pedido/sucesso', [App\Http\Controllers\CheckoutController::class, 'success'])->name('shop.payment.success');
+    Route::get('/pedido/falha', [App\Http\Controllers\CheckoutController::class, 'failure'])->name('shop.payment.failure');
+});
+
 Route::middleware(['permission'])->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
 });
@@ -61,6 +86,8 @@ Route::middleware(['permission','auth'])->name('company.')->prefix('company')->g
     Route::get('plans/{plan}/failure', [CompanyModule\PlanController::class, 'failure'])->name('plans.failure');
     Route::post('plans/cancel', [CompanyModule\PlanController::class, 'cancel'])->name('plans.cancel');
     Route::get('orders', [CompanyModule\OrderController::class, 'index'])->name('orders.index');
+    Route::get('payment-config', [CompanyModule\PaymentConfigController::class, 'index'])->name('payment-config.index');
+    Route::put('payment-config', [CompanyModule\PaymentConfigController::class, 'update'])->name('payment-config.update');
 
     Route::post('/users/create', [UserController::class, 'store'])->name('users.store');
     Route::get('/users/{id}/edit', [UserController::class, 'edit'])->name('users.edit');

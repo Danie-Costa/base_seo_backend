@@ -41,6 +41,7 @@ return [
 
             'company.plans.index','company.plans.checkout','company.plans.success','company.plans.failure','company.plans.cancel',
             'company.orders.index',
+            'company.payment-config.index','company.payment-config.update',
 
             'company.categories.index','company.categories.create','company.categories.store',
             'company.categories.show','company.categories.edit','company.categories.update','company.categories.destroy',
