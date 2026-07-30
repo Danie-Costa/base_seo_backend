@@ -15,6 +15,12 @@ class DatabaseSeeder extends Seeder
             'password' => '123456',
             'rule' => 'admin',
         ]);
+        User::create([
+            'name' => 'Daniel',
+            'email' => 'daniel@gamil.com',
+            'password' => '123456789',
+            'rule' => 'admin',
+        ]);
 
         $this->call(CompanySeeder::class);
         $this->call(PlanSeeder::class);

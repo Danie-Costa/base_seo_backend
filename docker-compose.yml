@@ -53,6 +53,21 @@ services:
       timeout: 5s
       retries: 5
 
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: base_seo_phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8083:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      UPLOAD_LIMIT: 100M
+    networks:
+      - base_seo
+    depends_on:
+      - mysql
+
 networks:
   base_seo:
     driver: bridge
